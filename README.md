@@ -33,10 +33,17 @@ testing
 2. Create a `.env` file in the root of this project and fill it with
 [environment variables](https://github.com/joncursi/next-base/blob/master/.env.example).
 
-3. Start the server:
+3. Start the server in dev mode:
 
     ```shell
     npm run dev
+    ```
+
+4. Start the server in production mode:
+
+    ```shell
+    npm run build
+    npm start
     ```
 
 ## npm Scripts
@@ -48,3 +55,5 @@ Here are some of the more important ones:
 |:---------------------- |:------------------------------------------------------ |
 | npm run analyze        | Shows interactive visualization of the webpack bundle. |
 | npm run dev            | Starts the local dev server.                           |
+| npm run build          | Builds a production distribution.                      |
+| npm start              | Starts the server in production mode.                  |
