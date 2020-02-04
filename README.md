@@ -2,21 +2,21 @@
 
 ⏭️ Base setup for a [Next.js](https://nextjs.org/) front-end. Includes:
 
-* [Next Routes](https://github.com/fridays/next-routes) dynamic routing
+* [Next Routes](https://github.com/fridays/next-routes) for dynamic routing
 * [Dotenv CLI](https://github.com/entropitor/dotenv-cli) for environment
 variables
-* [TypeScript](https://www.typescriptlang.org/) language
-* [Express](https://expressjs.com/) server
-* [Material UI](https://material-ui.com/) design system
+* [TypeScript](https://www.typescriptlang.org/) as the language
+* [Express](https://expressjs.com/) as the server
+* [Material UI](https://material-ui.com/) as the design system
 * [Styled JSX](https://github.com/zeit/styled-jsx) for CSS in JS
-* [Jest](https://jestjs.io/) test runner
-* [ESLint](https://eslint.org/) code linting (via
+* [Jest](https://jestjs.io/) as the test runner
+* [ESLint](https://eslint.org/) for code linting (via
 [`@joncursi/eslint-config`](https://github.com/joncursi/eslint-config))
-* [CommitLint](https://commitlint.js.org/) commit linting (via
+* [CommitLint](https://commitlint.js.org/) for commit linting (via
 [`@joncursi/eslint-config`](https://github.com/joncursi/eslint-config))
-* [Prettier](https://prettier.io/) code formatting (via
+* [Prettier](https://prettier.io/) for code formatting (via
 [`@joncursi/eslint-config`](https://github.com/joncursi/eslint-config))
-* [Fastlane](https://fastlane.tools/) deployments to [Now](https://zeit.co/)
+* [Fastlane](https://fastlane.tools/) for deployments to [Now](https://zeit.co/)
 
 [![CircleCI](https://circleci.com/gh/joncursi/next-base.svg?style=shield)](https://circleci.com/gh/joncursi/next-base)
 
