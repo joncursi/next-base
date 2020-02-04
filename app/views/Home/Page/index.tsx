@@ -15,6 +15,10 @@ const TECHNOLOGIES = [
     to: 'https://github.com/fridays/next-routes',
   },
   {
+    name: 'Dotenv CLI',
+    to: 'https://github.com/entropitor/dotenv-cli',
+  },
+  {
     name: 'TypeScript',
     to: 'https://www.typescriptlang.org/',
   },
