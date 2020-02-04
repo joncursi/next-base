@@ -2,6 +2,7 @@
 
 ⏭️ Base setup for a [Next.js](https://nextjs.org/) front-end. Includes:
 
+* [TypeScript](https://www.typescriptlang.org/) language
 * [Express](https://expressjs.com/) server
 * [Material UI](https://material-ui.com/) design system
 * [Jest](https://jestjs.io/) test runner

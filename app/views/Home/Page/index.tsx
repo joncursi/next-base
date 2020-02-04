@@ -11,6 +11,10 @@ import styles, { useStyles } from './styles';
 
 const TECHNOLOGIES = [
   {
+    name: 'TypeScript',
+    to: 'https://www.typescriptlang.org/',
+  },
+  {
     name: 'Express',
     to: 'https://expressjs.com/',
   },
