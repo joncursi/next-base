@@ -1,17 +1,16 @@
 # Next Base
 
-⏭️ Base setup for a Next.js front-end. Includes:
+⏭️ Base setup for a [Next.js](https://nextjs.org/) front-end. Includes:
 
-* [Next.js](https://nextjs.org/) framework
 * [Express](https://expressjs.com/) server
 * [Material UI](https://material-ui.com/) design system
 * [Jest](https://jestjs.io/) test runner
 * [ESLint](https://eslint.org/) code linting (via
-[@joncursi/eslint-config](https://github.com/joncursi/eslint-config))
+[`@joncursi/eslint-config`](https://github.com/joncursi/eslint-config))
 * [CommitLint](https://commitlint.js.org/) commit linting (via
-[@joncursi/eslint-config](https://github.com/joncursi/eslint-config))
+[`@joncursi/eslint-config`](https://github.com/joncursi/eslint-config))
 * [Prettier](https://prettier.io/) code formatting (via
-[@joncursi/eslint-config](https://github.com/joncursi/eslint-config))
+[`@joncursi/eslint-config`](https://github.com/joncursi/eslint-config))
 * [Fastlane](https://fastlane.tools/) deployments to [Now](https://zeit.co/)
 
 [![CircleCI](https://circleci.com/gh/joncursi/next-base.svg?style=shield)](https://circleci.com/gh/joncursi/next-base)
