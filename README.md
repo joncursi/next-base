@@ -10,6 +10,8 @@ variables
 * [Material UI](https://material-ui.com/) as the design system
 * [Styled JSX](https://github.com/zeit/styled-jsx) for CSS in JS
 * [Jest](https://jestjs.io/) as the test runner
+* [Snapshots](https://jestjs.io/docs/en/snapshot-testing) for component unit
+testing
 * [ESLint](https://eslint.org/) for code linting (via
 [`@joncursi/eslint-config`](https://github.com/joncursi/eslint-config))
 * [CommitLint](https://commitlint.js.org/) for commit linting (via
