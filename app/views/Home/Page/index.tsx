@@ -23,6 +23,10 @@ const TECHNOLOGIES = [
     to: 'https://material-ui.com/',
   },
   {
+    name: 'Styled JSX',
+    to: 'https://github.com/zeit/styled-jsx',
+  },
+  {
     name: 'Jest',
     to: 'https://jestjs.io/',
   },

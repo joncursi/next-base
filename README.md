@@ -5,6 +5,7 @@
 * [TypeScript](https://www.typescriptlang.org/) language
 * [Express](https://expressjs.com/) server
 * [Material UI](https://material-ui.com/) design system
+* [Styled JSX](https://github.com/zeit/styled-jsx) for CSS in JS
 * [Jest](https://jestjs.io/) test runner
 * [ESLint](https://eslint.org/) code linting (via
 [`@joncursi/eslint-config`](https://github.com/joncursi/eslint-config))
