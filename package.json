@@ -104,5 +104,5 @@
     "test:types": "tsc --project app/tsconfig.json && tsc --noEmit --project server/tsconfig.json",
     "test:unit": "unset NODE_ENV && dotenv -e .env.test -- jest --silent --maxWorkers=2"
   },
-  "version": "1.0.0"
+  "version": "1.0.1"
 }
