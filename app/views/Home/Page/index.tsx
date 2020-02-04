@@ -11,6 +11,10 @@ import styles, { useStyles } from './styles';
 
 const TECHNOLOGIES = [
   {
+    name: 'Next Routes',
+    to: 'https://github.com/fridays/next-routes',
+  },
+  {
     name: 'TypeScript',
     to: 'https://www.typescriptlang.org/',
   },

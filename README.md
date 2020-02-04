@@ -2,6 +2,7 @@
 
 ⏭️ Base setup for a [Next.js](https://nextjs.org/) front-end. Includes:
 
+* [Next Routes](https://github.com/fridays/next-routes) dynamic routing
 * [TypeScript](https://www.typescriptlang.org/) language
 * [Express](https://expressjs.com/) server
 * [Material UI](https://material-ui.com/) design system
