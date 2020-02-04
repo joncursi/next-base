@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "baseUrl": "../",
+    "outDir": ".next",
+    "paths": {
+      "~/*": [
+        "./app/*"
+      ]
+    },
+    "typeRoots": [
+      "../node_modules/@types"
+    ]
+  },
+  "exclude": [
+    "../server/**/*.*",
+    "./**/*.test.*",
+    "./.next"
+  ],
+  "extends": "../node_modules/@joncursi/eslint-config/tsconfig.json",
+  "include": [
+    "./**/*"
+  ]
+}

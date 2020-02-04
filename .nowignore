@@ -1,0 +1,10 @@
+*
+!app
+!app/**
+!server
+!server/**
+!.babelrc.js
+!next.config.js
+!now.json
+!package.json
+!package-lock.json

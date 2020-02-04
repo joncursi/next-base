@@ -1,0 +1,80 @@
+# README: https://github.com/fastlane/fastlane/tree/master/fastlane/docs
+# All available actions: https://docs.fastlane.tools/actions
+# can also be listed using the `fastlane actions` command
+
+# CONFIG -------------------------------------------------------------------------------------------
+
+# Automatically update fastlane if a new version is available
+# update_fastlane
+
+# Enforce a minimum fastlane version
+fastlane_version "2.141.0"
+
+# Enforce a minimum ruby version
+ruby_version "2.4.2"
+
+# GENERIC ------------------------------------------------------------------------------------------
+
+def prebuild(lane: lane)
+  # Ensure we're on the master branch
+  ensure_git_branch
+  # Ask for bump type
+  ENV["BUMP_TYPE"] = prompt(text: "Bump type (major, minor, or patch): ")
+  # Ensure gems are up-to-date
+  bundle_install
+  # Increment the version number in package.json
+  sh("npm --no-git-tag-version version #{ENV["BUMP_TYPE"]}")
+  ENV["VERSION_NUMBER"] = (
+    sh("node -p \"require('../package.json').version\"")
+  ).strip!
+  # Commit the version bump
+  sh(
+    "git commit -am \"chore(fastlane): Bump to v#{ENV["VERSION_NUMBER"]}\""
+  )
+  # Push the version bump
+  push_to_git_remote
+  # Auto-generate release notes from git commits
+  ENV["DESCRIPTION"] = changelog_from_git_commits(
+    match_lightweight_tag: false,
+    merge_commit_filtering: "exclude_merges",
+    pretty: "* %s - %an (%h)",
+    # Use the last known release of this platform > lane as a reference
+    tag_match_pattern: "web-#{lane}-*"
+  )
+end
+
+# This block is called only if the executed lane was successful
+after_all do |lane|
+  # Create a new git tag
+  add_git_tag(
+    tag: "web-#{lane}-v#{ENV["VERSION_NUMBER"]}"
+  )
+  # Push the git tag to remote
+  push_git_tags
+  # Create a new release
+  set_github_release(
+    api_token: ENV["GITHUB_TOKEN"],
+    description: ENV["DESCRIPTION"] || "",
+    is_prerelease: false,
+    name: "Production v#{ENV["VERSION_NUMBER"]}",
+    repository_name: "joncursi/web",
+    tag_name: last_git_tag,
+  )
+end
+
+error do |lane, exception|
+end
+
+platform :web do
+  before_all do |lane|
+    # Run the generic prebuild steps
+    prebuild(
+      lane: lane
+    )
+  end
+
+  desc "Deploy to production"
+  lane :production do
+    sh("npm run production:deploy:now")
+  end
+end

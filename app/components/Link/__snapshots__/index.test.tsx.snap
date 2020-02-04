@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link matches the snapshot 1`] = `
+<a
+  className="jsx-2857092000 textLink"
+  href="https://www.google.com"
+  onClick={[Function]}
+  style={
+    Object {
+      "color": "red",
+    }
+  }
+  target="_blank"
+>
+  <div>
+    children
+  </div>
+</a>
+`;

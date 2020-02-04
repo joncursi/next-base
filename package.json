@@ -1,0 +1,108 @@
+{
+  "author": "Jon Cursi <joncursi@gmail.com>",
+  "bugs": {
+    "email": "joncursi@gmail.com",
+    "url": "https://github.com/joncursi/next-base/issues"
+  },
+  "contributors": [
+    "Jon Cursi <joncursi@gmail.com>"
+  ],
+  "dependencies": {
+    "@material-ui/core": "4.9.1",
+    "@material-ui/styles": "4.9.0",
+    "@zeit/next-css": "1.0.1",
+    "express": "4.17.1",
+    "htmlescape": "1.1.1",
+    "lodash": "4.17.15",
+    "next": "9.2.1",
+    "next-routes": "1.4.2",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "sitemap": "5.1.0",
+    "styled-jsx": "3.2.4",
+    "validator": "12.2.0",
+    "zlib": "1.0.5"
+  },
+  "description": "⏭️ Base setup for a Next.js front-end.",
+  "devDependencies": {
+    "@babel/preset-env": "7.8.4",
+    "@joncursi/eslint-config": "5.4.0",
+    "@testing-library/jest-dom": "5.1.1",
+    "@testing-library/react": "9.4.0",
+    "@types/express": "4.17.2",
+    "@types/htmlescape": "1.1.1",
+    "@types/jest": "25.1.1",
+    "@types/lodash": "4.14.149",
+    "@types/material-ui": "0.21.7",
+    "@types/node": "13.7.0",
+    "@types/react": "16.9.19",
+    "@types/react-dom": "16.9.5",
+    "@types/styled-jsx": "2.2.8",
+    "@types/validator": "12.0.1",
+    "@types/zeit__next-typescript": "0.1.3",
+    "babel-jest": "25.1.0",
+    "babel-plugin-root-import": "6.4.1",
+    "babel-plugin-transform-imports": "2.0.0",
+    "cross-env": "7.0.0",
+    "dotenv-cli": "3.1.0",
+    "eslint-import-resolver-babel-plugin-root-import": "1.1.1",
+    "eslint-import-resolver-typescript": "2.0.0",
+    "husky": "4.2.1",
+    "jest": "25.1.0",
+    "lint-staged": "10.0.7",
+    "nodemon": "2.0.2",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.19.1",
+    "react-test-renderer": "16.12.0",
+    "rimraf": "3.0.1",
+    "ts-jest": "25.2.0",
+    "ts-node": "8.6.2",
+    "typescript": "3.7.5",
+    "webpack-bundle-analyzer": "3.6.0",
+    "webpackbar": "4.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "homepage": "https://github.com/joncursi/next-base/#readme",
+  "keywords": [
+    "material-ui",
+    "next",
+    "next.js",
+    "react",
+    "typescript"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js}": "npm run test:lint:js",
+    "*.{js,json,md,ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{ts,tsx}": "npm run test:lint:ts",
+    "*.md": "npm run test:lint:md"
+  },
+  "name": "@joncursi/next-base",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joncursi/next-base.git"
+  },
+  "scripts": {
+    "analyze": "cross-env ANALYZE=1 next build app",
+    "build": "NODE_OPTIONS=--max_old_space_size=8192 next build app && tsc --project app/tsconfig.json && tsc --project server/tsconfig.json",
+    "dev": "npm-run-all --parallel dev:start",
+    "dev:start": "unset NODE_ENV && dotenv -e .env -- nodemon",
+    "production:deploy": "bundle exec fastlane web production",
+    "production:deploy:now": "now --dotenv=.env.production --force --debug",
+    "start": "unset NODE_ENV && dotenv -e .env -- node app/.next/server/index.js",
+    "test": "npm-run-all test:**",
+    "test:lint:js": "eslint . --ext .js --fix --quiet",
+    "test:lint:md": "markdownlint README.md --config node_modules/@joncursi/eslint-config/markdownlint.config.json",
+    "test:lint:ts": "eslint . --ext .ts,.tsx --fix --quiet",
+    "test:types": "tsc --project app/tsconfig.json && tsc --noEmit --project server/tsconfig.json",
+    "test:unit": "unset NODE_ENV && dotenv -e .env.test -- jest --silent --maxWorkers=2"
+  },
+  "version": "1.0.0"
+}

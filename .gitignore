@@ -1,0 +1,7 @@
+.DS_Store
+.env
+.env.production
+.next
+fastlane/README.md
+fastlane/report.xml
+node_modules
