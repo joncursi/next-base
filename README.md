@@ -57,3 +57,4 @@ Here are some of the more important ones:
 | npm run dev            | Starts the local dev server.                           |
 | npm run build          | Builds a production distribution.                      |
 | npm start              | Starts the server in production mode.                  |
+| npm test               | Run all tests.                                         |
