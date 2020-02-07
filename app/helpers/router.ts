@@ -2,8 +2,8 @@
  * @prettier
  */
 
-import ServerSideRouter from '../../server/router';
+import ServerRouter from '../../server/router';
 
-export const Router = ServerSideRouter.Router;
+export const Router = ServerRouter.Router;
 
-export const RouterLink = ServerSideRouter.Link;
+export const RouterLink = ServerRouter.Link;
