@@ -18,7 +18,8 @@ testing
 [`@joncursi/eslint-config`](https://github.com/joncursi/eslint-config))
 * [Prettier](https://prettier.io/) for code formatting (via
 [`@joncursi/eslint-config`](https://github.com/joncursi/eslint-config))
-* [Fastlane](https://fastlane.tools/) for deployments to [Now](https://zeit.co/)
+* [Fastlane](https://fastlane.tools/) for release management
+* [Now](https://zeit.co/) for deployments
 
 [![CircleCI](https://circleci.com/gh/joncursi/next-base.svg?style=shield)](https://circleci.com/gh/joncursi/next-base)
 
