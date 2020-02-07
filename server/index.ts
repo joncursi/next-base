@@ -9,7 +9,7 @@ import { SitemapStream, streamToPromise } from 'sitemap';
 
 import ENV from '../app/constants/env';
 
-import Routes from './routes';
+import Router from './router';
 
 // Create the express server
 const expressApp = express();
@@ -23,7 +23,7 @@ const nextApp = (next as any)({
 });
 
 // Create the next handle
-const nextHandle = Routes.getRequestHandler(nextApp);
+const nextHandle = Router.getRequestHandler(nextApp);
 
 // Configure `sitemap.xml`
 let sitemap: any;

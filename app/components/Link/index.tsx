@@ -5,7 +5,7 @@
 import * as React from 'react';
 import isURL from 'validator/lib/isURL';
 
-import Routes from '../../../server/routes';
+import { RouterLink } from '~/helpers/router';
 
 import styles from './styles';
 
@@ -53,10 +53,8 @@ const Link: React.FC<Props> = ({
       )}
 
       {!isExternalUrl && (
-        <Routes.Link params={params} route={to} {...props}>
-          {/* eslint-disable jsx-a11y/no-static-element-interactions */}
-          {/* eslint-disable jsx-a11y/click-events-have-key-events */}
-          {/* eslint-disable jsx-a11y/anchor-is-valid */}
+        <RouterLink params={params} route={to} {...props}>
+          {/* eslint-disable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events, jsx-a11y/anchor-is-valid */}
           <a
             className={className}
             onClick={onClick}
@@ -65,10 +63,8 @@ const Link: React.FC<Props> = ({
           >
             {children || null}
           </a>
-          {/* eslint-enable jsx-a11y/anchor-is-valid */}
-          {/* eslint-enable jsx-a11y/click-events-have-key-events */}
-          {/* eslint-enable jsx-a11y/no-static-element-interactions */}
-        </Routes.Link>
+          {/* eslint-enable jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events, jsx-a11y/anchor-is-valid */}
+        </RouterLink>
       )}
     </>
   );

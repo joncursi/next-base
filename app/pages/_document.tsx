@@ -131,11 +131,6 @@ class Document extends DocumentImport<Props> {
           <meta content={COLORS.PRIMARY} name="msapplication-TileColor" />
           <meta content={COLORS.PRIMARY} name="theme-color" />
 
-          <meta
-            content="RCyMwbqpOJnycWzhUXhN_Rau4zLKEJjlJOPrugGp21c"
-            name="google-site-verification"
-          />
-
           {/* Material UI */}
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"
