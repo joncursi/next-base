@@ -11,7 +11,7 @@
     "@material-ui/core": "4.9.1",
     "@material-ui/styles": "4.9.0",
     "@zeit/next-css": "1.0.1",
-    "express": "4.17.1",
+    "express": "4.17.3",
     "htmlescape": "1.1.1",
     "lodash": "4.17.15",
     "next": "9.2.1",
